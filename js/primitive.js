@@ -86,7 +86,7 @@ export default class PrimitiveTool {
 
   addSticker() {
     const image = new Image(150, 40);
-    image.src = 'https://www.netlify.com/img/press/logos/full-logo-light.svg';
+    image.src = '/img/browser/brave.png';
 
     this.ctx.drawImage(image, this.points[0].x, this.points[0].y);
   }
