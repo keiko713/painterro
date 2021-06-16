@@ -60,7 +60,7 @@ typings/
 .idea
 
 # custom 
-build/painterro*
-build/report*
+# build/painterro*
+# build/report*
 
 wp/
