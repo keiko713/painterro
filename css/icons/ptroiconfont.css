@@ -121,3 +121,6 @@ url("ptroiconfont.svg?369c1b36c410d0842646d6396ce5c2b6#ptroiconfont") format("sv
 .ptro-icon-zoomout:before {
 	content: "\f121";
 }
+.ptro-icon-sticker:before {
+	content: "\f122";
+}

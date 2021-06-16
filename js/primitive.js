@@ -62,6 +62,7 @@ export default class PrimitiveTool {
         this.points = [cur];
         this.drawBrushPath();
       } else if (this.type === 'sticker') {
+        this.state.cornerMarked = true;
         const cord = [
           (event.clientX - this.main.elLeft()) + this.main.scroller.scrollLeft,
           (event.clientY - this.main.elTop()) + this.main.scroller.scrollTop,
