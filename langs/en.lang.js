@@ -25,6 +25,8 @@ export default {
   shadowOnFull: 'Shadow',
   fontStrokeAndShadow: 'S&S',
   fontStrokeAndShadowFull: 'Stroke & Shadow',
+  stickerType: 'Type',
+  stickerTypeFull: 'Sticker type',
 
   fontName: 'F',
   fontNameFull: 'Font name',
