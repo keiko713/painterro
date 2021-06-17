@@ -93,7 +93,7 @@ export default class PrimitiveTool {
 
   addSticker() {
     const image = new Image(150, 40);
-    image.src = `/img/browser/` + this.stickerType + `.png`;
+    image.src = `/img/stickers/` + this.stickerType + `.svg`;
 
     this.ctx.drawImage(image, this.points[0].x, this.points[0].y);
   }

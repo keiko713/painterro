@@ -90,7 +90,7 @@ export default class ControlBuilder {
     if (this.main.params.availableStickerTypes) {
       return ControlBuilder.buildDropDownControl('stickerType', action, getValue, this.main.params.availableStickerTypes);
     }
-    return ControlBuilder.buildDropDownControl('stickerType', action, getValue, ['brave']);
+    return ControlBuilder.buildDropDownControl('stickerType', action, getValue, ['none']);
   }
 
   static buildInputControl(name, action, getValue, minVal, maxVal) {
