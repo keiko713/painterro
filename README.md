@@ -222,6 +222,10 @@ Painterro({
 |`extraFonts`| By default Text tool supports only several [predefined](https://github.com/devforth/painterro/blob/master/js/text.js#L38) fonts due to compatibility considirations , but yousing this option you can add any fonts you want if you are sure they are available on your page/app | `['Roboto']` |
 |`toolbarHeightPx`| Height of toolbar in pixels | `40` | 
 |`buttonSizePx`| Button for toolbar in pixels | `32` |
+|`defaultStickerType` | Default sticker type | `none` |
+|`availableStickerTypes` | A list of stickers that are available for selection in a drop down list e.g. `['up', 'down']`.  Otherwise a list of default sticker type is used. | `['none']` |
+|`stickerPrefix` | A prefix of stickers, the path to the stickers directory e.g. `/img/` | `/` |
+|`stickerSuffix` | A suffix of stickers e.g. `.png`, `.svg` | `.png` |
 
 ## Events
 

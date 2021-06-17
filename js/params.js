@@ -84,7 +84,10 @@ export function setDefaults(parameters) {
   params.defaultTextStrokeAndShadow = firstDefined(settings.defaultTextStrokeAndShadow,
     params.defaultTextStrokeAndShadow, true);
 
-  params.defaultStickerType = settings.defaultStickerType || params.defaultStickerType || 'none';
+  params.defaultStickerType = params.defaultStickerType || 'none';
+  params.availableStickerTypes = params.availableStickerTypes || [params.defaultStickerType];
+  params.stickerPrefix = params.stickerPrefix || '/';
+  params.stickerSuffix = params.stickerSuffix || '.png';
 
   params.worklogLimit = firstDefined(params.worklogLimit, 100);
 
