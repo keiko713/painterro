@@ -1,3 +1,5 @@
+import { imgToDataURL } from "./utils";
+
 export default class PrimitiveTool {
   constructor(main) {
     this.ctx = main.ctx;
@@ -35,6 +37,10 @@ export default class PrimitiveTool {
 
   setEraserWidth(width) {
     this.eraserWidth = width;
+  }
+
+  setStickerType(type) {
+    this.stickerType = type;
   }
 
   handleMouseDown(event) {
@@ -87,7 +93,7 @@ export default class PrimitiveTool {
 
   addSticker() {
     const image = new Image(150, 40);
-    image.src = '/img/browser/brave.png';
+    image.src = `/img/browser/` + this.stickerType + `.png`;
 
     this.ctx.drawImage(image, this.points[0].x, this.points[0].y);
   }

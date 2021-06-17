@@ -84,6 +84,8 @@ export function setDefaults(parameters) {
   params.defaultTextStrokeAndShadow = firstDefined(settings.defaultTextStrokeAndShadow,
     params.defaultTextStrokeAndShadow, true);
 
+  params.defaultStickerType = settings.defaultStickerType || params.defaultStickerType || 'brave';
+
   params.worklogLimit = firstDefined(params.worklogLimit, 100);
 
   params.defaultTool = params.defaultTool || 'select';

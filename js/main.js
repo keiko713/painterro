@@ -461,6 +461,7 @@ class PainterroProc {
       },
     }, {
       name: 'sticker',
+      controls: [this.controlBuilder.buildLineWidthControl(1)],
       activate: () => {
         if (this.initText) this.wrapper.click();
         this.toolContainer.style.cursor = 'crosshair';
@@ -604,6 +605,7 @@ class PainterroProc {
     this.primitiveTool.setLineWidth(this.params.defaultLineWidth);
     this.primitiveTool.setArrowLength(this.params.defaultArrowLength);
     this.primitiveTool.setEraserWidth(this.params.defaultEraserWidth);
+    this.primitiveTool.setStickerType(this.params.defaultStickerType);
     this.primitiveTool.setPixelSize(this.params.defaultPixelSize);
     this.hasUnsaved = false;
     this.worklog = new WorkLog(this, (state) => {

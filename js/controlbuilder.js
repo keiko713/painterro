@@ -79,6 +79,20 @@ export default class ControlBuilder {
     return ControlBuilder.buildInputControl('arrowLength', action, getValue, 1, 99);
   }
 
+  buildStickerTypeControl(controlIndex) {
+    const action = () => {
+      const stickerType = this.main.getElemByIdSafe(this.main.activeTool.controls[controlIndex].id).value;
+      this.main.primitiveTool.setStickerType(stickerType);
+      setParam('defaultStickerType', stickerType);
+    };
+    const getValue = () => this.main.primitiveTool.stickerType;
+
+    if (this.main.params.availableStickerTypes) {
+      return ControlBuilder.buildDropDownControl('stickerType', action, getValue, this.main.params.availableStickerTypes);
+    }
+    return ControlBuilder.buildDropDownControl('stickerType', action, getValue, ['brave']);
+  }
+
   static buildInputControl(name, action, getValue, minVal, maxVal) {
     return {
       type: 'int',
