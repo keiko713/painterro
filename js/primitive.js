@@ -94,6 +94,7 @@ export default class PrimitiveTool {
   addSticker() {
     const image = new Image(150, 40);
     image.src = this.main.params.stickerPrefix + this.stickerType + this.main.params.stickerSuffix;
+    image.style.fill = this.main.colorWidgetState.line.alphaColor;
 
     this.ctx.drawImage(image, this.points[0].x, this.points[0].y);
   }
