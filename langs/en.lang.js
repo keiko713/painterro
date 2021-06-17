@@ -70,6 +70,7 @@ export default {
     zoomout: 'Zoom Out',
     undo: 'Undo',
     redo: 'Redo',
+    sticker: 'Add sticker',
   },
   pasteOptions: {
     fit: 'Replace all',

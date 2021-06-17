@@ -1,9 +1,9 @@
 @font-face {
 	font-family: "ptroiconfont";
-	src: url("ptroiconfont.eot?369c1b36c410d0842646d6396ce5c2b6?#iefix") format("embedded-opentype"),
-url("ptroiconfont.woff?369c1b36c410d0842646d6396ce5c2b6") format("woff"),
-url("ptroiconfont.ttf?369c1b36c410d0842646d6396ce5c2b6") format("truetype"),
-url("ptroiconfont.svg?369c1b36c410d0842646d6396ce5c2b6#ptroiconfont") format("svg");
+	src: url("ptroiconfont.eot?6dcd8f6af22ff292a6575e014dbd1af3?#iefix") format("embedded-opentype"),
+url("ptroiconfont.woff?6dcd8f6af22ff292a6575e014dbd1af3") format("woff"),
+url("ptroiconfont.ttf?6dcd8f6af22ff292a6575e014dbd1af3") format("truetype"),
+url("ptroiconfont.svg?6dcd8f6af22ff292a6575e014dbd1af3#ptroiconfont") format("svg");
 	font-weight: normal;
     font-style: normal;
 }
@@ -106,21 +106,21 @@ url("ptroiconfont.svg?369c1b36c410d0842646d6396ce5c2b6#ptroiconfont") format("sv
 .ptro-icon-settings:before {
 	content: "\f11c";
 }
-.ptro-icon-text:before {
+.ptro-icon-sticker:before {
 	content: "\f11d";
 }
-.ptro-icon-undo:before {
+.ptro-icon-text:before {
 	content: "\f11e";
 }
-.ptro-icon-unlinked:before {
+.ptro-icon-undo:before {
 	content: "\f11f";
 }
-.ptro-icon-zoomin:before {
+.ptro-icon-unlinked:before {
 	content: "\f120";
 }
-.ptro-icon-zoomout:before {
+.ptro-icon-zoomin:before {
 	content: "\f121";
 }
-.ptro-icon-sticker:before {
+.ptro-icon-zoomout:before {
 	content: "\f122";
 }
