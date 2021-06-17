@@ -461,7 +461,7 @@ class PainterroProc {
       },
     }, {
       name: 'sticker',
-      controls: [this.controlBuilder.buildLineWidthControl(1)],
+      controls: [this.controlBuilder.buildStickerTypeControl(1)],
       activate: () => {
         if (this.initText) this.wrapper.click();
         this.toolContainer.style.cursor = 'crosshair';
