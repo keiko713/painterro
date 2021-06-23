@@ -213,6 +213,23 @@ class PainterroProc {
       },
       eventListner: () => this.primitiveTool,
     }, {
+      name: 'sticker',
+      controls: [this.controlBuilder.buildStickerTypeControl(0), {
+        type: 'color',
+        title: 'lineColor',
+        titleFull: 'lineColorFull',
+        target: 'line',
+        action: () => {
+          this.colorPicker.open(this.colorWidgetState.line);
+        },
+      }],
+      activate: () => {
+        if (this.initText) this.wrapper.click();
+        this.toolContainer.style.cursor = 'crosshair';
+        this.primitiveTool.activate('sticker');
+      },
+      eventListner: () => this.primitiveTool,
+    }, {
       name: 'eraser',
       controls: [this.controlBuilder.buildEraserWidthControl(0),
       ],
@@ -459,23 +476,6 @@ class PainterroProc {
           doClose();
         }
       },
-    }, {
-      name: 'sticker',
-      controls: [this.controlBuilder.buildStickerTypeControl(0), {
-        type: 'color',
-        title: 'lineColor',
-        titleFull: 'lineColorFull',
-        target: 'line',
-        action: () => {
-          this.colorPicker.open(this.colorWidgetState.line);
-        },
-      }],
-      activate: () => {
-        if (this.initText) this.wrapper.click();
-        this.toolContainer.style.cursor = 'crosshair';
-        this.primitiveTool.activate('sticker');
-      },
-      eventListner: () => this.primitiveTool,
     }];
     this.isMobile = isMobile.any;
     this.toolByName = {};
