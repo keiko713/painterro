@@ -92,11 +92,16 @@ export default class PrimitiveTool {
   }
 
   addSticker() {
-    const image = new Image(150, 40);
-    image.src = this.main.params.stickerPrefix + this.stickerType + this.main.params.stickerSuffix;
-    image.style.fill = this.main.colorWidgetState.line.alphaColor;
-
-    this.ctx.drawImage(image, this.points[0].x, this.points[0].y);
+    const src = this.main.params.stickerPrefix + this.stickerType + this.main.params.stickerSuffix;
+    const color = this.main.colorWidgetState.line.alphaColor;
+    fetch(src)
+      .then(r => r.text())
+      .then((svgXml) => {
+        var img = new Image();
+        var coloredSvgXml = svgXml.replace(/currentColor/g, color);
+        img.src = 'data:image/svg+xml;charset=utf-8,' + coloredSvgXml;
+        this.ctx.drawImage(img, this.points[0].x, this.points[0].y);
+      });
   }
 
   drawBrushPath() {
